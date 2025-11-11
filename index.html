@@ -12,6 +12,7 @@
             --accent: #1abc9c;
             --light: #ecf0f1;
             --dark: #1a2530;
+            --darker: #0f1419;
             --text: #333;
             --text-light: #7f8c8d;
             --skills-bg: #2c3e50;
@@ -125,6 +126,15 @@
         }
         
         .section-dark h2 {
+            color: white;
+        }
+        
+        .section-darker {
+            background-color: var(--darker);
+            color: white;
+        }
+        
+        .section-darker h2 {
             color: white;
         }
         
@@ -242,7 +252,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top; /* Focus on the face */
+            object-position: center top;
         }
         
         .profile-text {
@@ -433,6 +443,61 @@
             font-size: 0.8rem;
         }
         
+        /* Education Section */
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .education-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .education-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .education-item h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .education-item .date {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: rgba(26, 188, 156, 0.2);
+            border-radius: 4px;
+        }
+        
+        .certifications-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .certifications-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .certifications-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
         /* Contact Section */
         .contact-container {
             display: flex;
@@ -485,7 +550,7 @@
         
         /* Footer */
         footer {
-            background-color: var(--dark);
+            background-color: var(--darker);
             color: white;
             padding: 50px 0 20px;
         }
@@ -602,6 +667,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -613,7 +679,7 @@
     <section class="hero" id="home">
         <div class="container">
             <h1>Data Analyst & Certified Data Protection Officer</h1>
-            <p>Transforming raw data into clear, actionable stories that drive business growth and efficiency.</p>
+            <p>Dedicated and detail-oriented professional with a proven track record in data analysis, procurement, and customer service. Passionate about leveraging analytical thinking to deliver actionable insights.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -627,15 +693,14 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am a Data Analyst, Certified Data Protection Officer and Experienced Accounts Personnel with a strong interest in using data to drive efficiency, growth, and informed business decisions.</p>
-                    <p>Skilled in Power BI, Excel, SQL and Python, I specialize in analyzing sales, customer and operational data to uncover insights that improve performance and profitability. I am passionate about transforming raw data into clear, actionable stories that support strategic decision-making.</p>
-                    <p>My professional journey spans Data Analytics, Accounting and Virtual Assistance, allowing me to combine technical skills with business understanding and administrative excellence. At Generation Ghana, I developed and presented Power BI dashboards that identified trends and guided data-driven recommendations.</p>
+                    <p>I am a dedicated and detail-oriented professional with a proven track record in data analysis, procurement, and customer service. My experience has included executing data-driven projects, performing financial reconciliations, and managing document workflows.</p>
+                    <p>Passionate about leveraging analytical thinking and technical tools to deliver actionable insights that drive organizational growth. Known for effective collaboration and fast learning in dynamic environments.</p>
+                    <p>My professional journey spans Data Analytics, Accounting and Customer Service, allowing me to combine technical skills with business understanding and administrative excellence.</p>
                     <p>As a Certified Data Protection Officer, I uphold the highest standards of data privacy and compliance in every project I handle.</p>
                     <p>I am motivated by opportunities to solve real-world business problems through data, collaboration and continuous learning.</p>
                 </div>
                 <div class="about-image">
                     <div class="profile-image">
-                        <!-- Your profile image - cropped to focus on face -->
                         <img src="images/MEE.jpeg" alt="Na-Hawa Moru Naan">
                     </div>
                     <div class="profile-text">
@@ -654,39 +719,28 @@
             <h2>Technical & Professional Skills</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming & Languages</h3>
+                    <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
                     <ul class="skill-list">
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                        <li>Matplotlib</li>
-                        <li>Seaborn</li>
+                        <li>Microsoft Office Suite (Advanced Excel)</li>
+                        <li>Power BI & Data Visualization</li>
+                        <li>SQL Basics & Database Management</li>
+                        <li>Python for Data Analysis</li>
+                        <li>Statistical Analysis & Modeling</li>
+                        <li>Data Cleaning & Preprocessing</li>
+                        <li>Financial Reporting & Analysis</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Data Analysis & Visualization</h3>
+                    <h3><i class="fas fa-chart-line"></i> Data Analytics</h3>
                     <ul class="skill-list">
-                        <li>Power BI</li>
-                        <li>Advanced MS Excel</li>
-                        <li>Data Storytelling</li>
-                        <li>DAX</li>
-                        <li>VLOOKUP</li>
-                        <li>Dashboard Design</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Data Management</h3>
-                    <ul class="skill-list">
-                        <li>Data Cleaning & Wrangling</li>
-                        <li>Data Preprocessing</li>
-                        <li>Statistical Methods</li>
-                        <li>Data Mining Techniques</li>
-                        <li>Data Modeling</li>
-                        <li>Database Design</li>
-                        <li>ETL Processes</li>
+                        <li>Data-Driven Decision Making</li>
+                        <li>Trend Analysis & Forecasting</li>
+                        <li>Performance Metrics & KPIs</li>
+                        <li>Data Storytelling & Visualization</li>
+                        <li>Dashboard Development</li>
+                        <li>Market Trend Analysis</li>
+                        <li>Customer Behavior Analysis</li>
                     </ul>
                 </div>
                 
@@ -696,30 +750,53 @@
                         <li>Data Privacy Regulations</li>
                         <li>Compliance Frameworks</li>
                         <li>Data Security Best Practices</li>
-                        <li>GDPR</li>
-                        <li>Data Ethics</li>
+                        <li>GDPR Implementation</li>
+                        <li>Data Ethics & Governance</li>
+                        <li>Risk Assessment & Management</li>
+                        <li>Audit Preparation</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Statistical Analysis</h3>
+                    <h3><i class="fas fa-cogs"></i> Business & Professional Skills</h3>
                     <ul class="skill-list">
-                        <li>Hypothesis Testing</li>
-                        <li>Regression Analysis</li>
-                        <li>A/B Testing</li>
-                        <li>Statistical Significance</li>
-                        <li>Descriptive Statistics</li>
-                        <li>Inferential Statistics</li>
+                        <li>Analytical and Critical Thinking</li>
+                        <li>Strategic Planning & Execution</li>
+                        <li>Communication and Teamwork</li>
+                        <li>Leadership and Problem Solving</li>
+                        <li>Attention to Detail</li>
+                        <li>Quick Learner in Fast-paced Environments</li>
+                        <li>Stakeholder Management</li>
+                        <li>Project Coordination</li>
+                        <li>Financial Management</li>
+                        <li>Inventory Optimization</li>
                     </ul>
                 </div>
                 
                 <div class="skill-category">
-                    <h3><i class="fas fa-cogs"></i> Tools & Platforms</h3>
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
                     <ul class="skill-list">
-                        <li>Git & GitHub</li>
+                        <li>Microsoft Excel (Advanced)</li>
+                        <li>Power BI</li>
+                        <li>SQL Databases</li>
+                        <li>Python (Pandas, NumPy)</li>
                         <li>Jupyter Notebooks</li>
-                        <li>Excel Power Query</li>
-                        <li>Power Pivot</li>
+                        <li>Git & Version Control</li>
+                        <li>Microsoft Power Platform</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Effective Communication</li>
+                        <li>Team Collaboration</li>
+                        <li>Problem-Solving</li>
+                        <li>Adaptability</li>
+                        <li>Time Management</li>
+                        <li>Client Relationship Management</li>
+                        <li>Presentation Skills</li>
+                        <li>Cross-functional Coordination</li>
                     </ul>
                 </div>
             </div>
@@ -734,12 +811,12 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">August - November 2025</div>
-                        <h3 class="timeline-title">Data Analyst Bootcamp Graduate</h3>
-                        <h4>Generation, Ghana</h4>
+                        <h3 class="timeline-title">Data Analyst Bootcamp</h3>
+                        <h4>Generation Ghana</h4>
                         <ul>
-                            <li>Created and presented data visualizations using Tableau and Power BI resulting in better presentation skills and a deeper understanding of data storytelling</li>
-                            <li>Demonstrated strong teamwork and problem-solving skills through group projects resulting in successful project completion and achievement of team goals</li>
-                            <li>Developed confidence in presenting complex data insights to stakeholders, leading to enhanced communication skills</li>
+                            <li>Completed rigorous training in data analysis, applying SQL and Excel to real-world datasets</li>
+                            <li>Collaborated on multiple projects, demonstrating strong problem-solving skills and leveraging teamwork to achieve successful outcomes</li>
+                            <li>Enhanced analytical capabilities through hands-on experience in data visualization and statistical analysis under tight deadlines</li>
                         </ul>
                     </div>
                 </div>
@@ -751,7 +828,7 @@
                         <ul>
                             <li>Designed and created financial reports in Excel, presenting insights to senior management for informed decision-making</li>
                             <li>Monitored and improved stock management systems by analyzing market trends and optimizing inventory levels</li>
-                            <li>Managed accounts payable and receivable, reconciling financial discrepancies to ensure accurate financial records</li>
+                            <li>Assisted in enhancing accuracy and efficiency of stock replenishment processes</li>
                         </ul>
                     </div>
                 </div>
@@ -763,7 +840,40 @@
                         <ul>
                             <li>Supported record management by receiving, cross-checking, and filing documents to ensure compliance and data integrity</li>
                             <li>Executed precise data entry operations contributing to reliable organizational databases</li>
-                            <li>Identified and rectified inconsistencies in existing records through careful cross-referencing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">July - August 2019</div>
+                        <h3 class="timeline-title">Intern</h3>
+                        <h4>Afro-Arab Microfinance Company, Accra</h4>
+                        <ul>
+                            <li>Supported the opening and management of customer savings accounts with attention to accuracy and compliance</li>
+                            <li>Acted as a stand-in teller, handling deposits and withdrawals while maintaining high transactional accuracy</li>
+                            <li>Assisted in analyzing customer feedback data, creating visualizations that informed service improvement strategies increasing satisfaction by 15%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">June - August 2018</div>
+                        <h3 class="timeline-title">Volunteer</h3>
+                        <h4>Yaa Salaam Opportunity Center, Accra</h4>
+                        <ul>
+                            <li>Led peer engagement initiatives that increased program participation by 25%, fostering teamwork and collaboration</li>
+                            <li>Provided efficient event coordination as an usher and host, strengthening communication among stakeholders</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2016 - August 2017</div>
+                        <h3 class="timeline-title">Mobile Banker</h3>
+                        <h4>Afro-Arab Microfinance Company, Accra</h4>
+                        <ul>
+                            <li>Marketed financial products, opened accounts, and facilitated loan processing, directly enhancing customer experience</li>
+                            <li>Conducted needs assessments with clients using financial tools, which supported tailored banking solutions</li>
                         </ul>
                     </div>
                 </div>
@@ -771,8 +881,44 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section class="section-darker" id="education">
+        <div class="container">
+            <h2>Education & Certifications</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3>Bachelor of Commerce</h3>
+                    <p><strong>Procurement & Supply Chain Management</strong></p>
+                    <p>University of Cape Coast, Ghana</p>
+                    <div class="date">2017 - 2021</div>
+                </div>
+                <div class="education-item">
+                    <h3>Professional Certifications</h3>
+                    <ul class="certifications-list">
+                        <li>Certified Data Protection Officer │ 2025</li>
+                        <li>ALX Virtual Assistant │ 2024</li>
+                        <li>ALX AI Essential Career │ 2024</li>
+                        <li>Learning Data Analytics: Foundation (LinkedIn Learning) │ 2024</li>
+                        <li>Microsoft Office 2010 (Alison) │ 2018</li>
+                        <li>ABC Computer IT Literacy (Alison) │ 2018</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <h3>Additional Training</h3>
+                    <ul class="certifications-list">
+                        <li>Data Analyst Bootcamp - Generation Ghana │ 2025</li>
+                        <li>Financial Management & Reporting</li>
+                        <li>Inventory Management Systems</li>
+                        <li>Customer Service Excellence</li>
+                        <li>Data Privacy & Compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section class="section-dark" id="projects">
+    <section class="section-light" id="projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
@@ -781,13 +927,12 @@
                         <i class="fas fa-chart-line" style="font-size: 3rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Power BI Sales Dashboard</h3>
-                        <p>Created a comprehensive sales dashboard using Power BI to visualize key performance indicators, track sales trends, and identify growth opportunities.</p>
+                        <h3 class="project-title">Financial Reporting Dashboard</h3>
+                        <p>Designed and created comprehensive financial reports in Excel, presenting key insights to senior management for informed decision-making.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">Excel</span>
+                            <span class="project-tag">Financial Analysis</span>
                             <span class="project-tag">Data Visualization</span>
-                            <span class="project-tag">Dashboard</span>
-                            <span class="project-tag">DAX</span>
                         </div>
                     </div>
                 </div>
@@ -796,13 +941,12 @@
                         <i class="fas fa-warehouse" style="font-size: 3rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Inventory Optimization Analysis</h3>
-                        <p>Analyzed inventory data to optimize stock levels, reduce carrying costs, and improve supply chain efficiency using Excel and statistical methods.</p>
+                        <h3 class="project-title">Stock Management Optimization</h3>
+                        <p>Monitored and improved stock management systems by analyzing market trends and optimizing inventory levels for better efficiency.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Excel</span>
                             <span class="project-tag">Inventory Management</span>
-                            <span class="project-tag">Statistical Analysis</span>
-                            <span class="project-tag">VLOOKUP</span>
+                            <span class="project-tag">Market Analysis</span>
+                            <span class="project-tag">Supply Chain</span>
                         </div>
                     </div>
                 </div>
@@ -811,28 +955,26 @@
                         <i class="fas fa-shield-alt" style="font-size: 3rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Data Protection Compliance Framework</h3>
-                        <p>Developed a data protection compliance framework to ensure adherence to data privacy regulations and best practices.</p>
+                        <h3 class="project-title">Data Protection Compliance</h3>
+                        <p>Developed data protection frameworks and ensured compliance with data privacy regulations as a Certified Data Protection Officer.</p>
                         <div class="project-tags">
                             <span class="project-tag">Data Protection</span>
                             <span class="project-tag">Compliance</span>
                             <span class="project-tag">Privacy</span>
-                            <span class="project-tag">GDPR</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-database" style="font-size: 3rem;"></i>
+                        <i class="fas fa-users" style="font-size: 3rem;"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Customer Segmentation Analysis</h3>
-                        <p>Used Python and clustering algorithms to segment customers based on purchasing behavior, enabling targeted marketing strategies.</p>
+                        <h3 class="project-title">Customer Feedback Analysis</h3>
+                        <p>Analyzed customer feedback data and created visualizations that informed service improvement strategies, increasing satisfaction by 15%.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Pandas</span>
-                            <span class="project-tag">Clustering</span>
                             <span class="project-tag">Customer Analytics</span>
+                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Service Improvement</span>
                         </div>
                     </div>
                 </div>
@@ -841,7 +983,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section-light" id="contact">
+    <section class="section-darker" id="contact">
         <div class="container">
             <h2>Get In Touch</h2>
             <div class="contact-container">
